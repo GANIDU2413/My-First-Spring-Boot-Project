@@ -9,8 +9,8 @@ import org.springframework.context.ApplicationContext;
 public class DemoApplication {
 
 	public static void main(String[] args) {
-		ApplicationContext context = SpringApplication.run(DemoApplication.class, args);
-		Laptop laptop = context.getBean(Laptop.class);
+		ApplicationContext context = SpringApplication.run(DemoApplication.class, args); //for create object without using *new
+		Laptop laptop = context.getBean(Laptop.class); //provide the class name
 		laptop.compile();
 
 		System.out.println(laptop.hashCode());
