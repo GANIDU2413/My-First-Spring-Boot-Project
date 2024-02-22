@@ -12,6 +12,12 @@ public class DemoApplication {
 		ApplicationContext context = SpringApplication.run(DemoApplication.class, args);
 		Laptop laptop = context.getBean(Laptop.class);
 		laptop.compile();
+
+		System.out.println(laptop.hashCode());
+
+		Laptop laptop1 = context.getBean(Laptop.class);
+		System.out.println(laptop1.hashCode());
+
 	}
 
 }
